@@ -4,7 +4,7 @@ void main() {
   List<dynamic> b = ['b', 'b', 'a','c'];
   int count = 0;
   int limit = a.length;
-  int secondlimit = b.length;
+  int limit2 = b.length;
   if (a.length != b.length) {
     print("false");
   } else {

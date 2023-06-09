@@ -11,10 +11,15 @@ void main() {
   }
   print('Enter the position that you want to delete');
   int position = int.parse(stdin.readLineSync()!);
-  print(array.length);
-  for (int i = position-1; i < array.length-1; i++) {
-    array[i] = array[i + 1];
+  // print(array.length);
+  if (position <= 0 || position > array.length) {
+    print('Invalid Position');
+  } else {
+    for (int i = position - 1; i < array.length - 1; i++) {
+      array[i] = array[i + 1];
+    }
+    // array.removeAt(array.length - 1);
+    array.length--;
+    print('After deleting the remaning array are : $array');
   }
-  array.removeAt(array.length - 1);
-  print('After deleting the remaning array are : $array');
 }
