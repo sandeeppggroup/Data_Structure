@@ -59,8 +59,11 @@ class LinkedList {
 
 void main() {
   final link = LinkedList();
+  link.insertAtHead(50);
   link.insertAtTail(10);
   link.insertAtTail(20);
   link.insertAtTail(30);
+  
+  link.insertAtTail(60);
   link.display();
 }
