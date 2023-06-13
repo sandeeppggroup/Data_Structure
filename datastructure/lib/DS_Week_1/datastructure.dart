@@ -1,3 +1,5 @@
+// The code you provided compares two lists, a and b, and checks if they contain the same elements (regardless of the order).
+// If they have the same elements, it prints "true"; otherwise, it prints "false".
 void main() {
 
   List<dynamic> a = ['a', 'b', 'c','b'];

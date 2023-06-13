@@ -1,4 +1,6 @@
-import 'dart:io';
+// Can you explain how the nested loops and swapping of elements in the strList1 
+//list are utilized to generate permutations of str1 and check if any permutation is equal to str2?
+
 
 void main() {
   String str1 = 'abcde';
