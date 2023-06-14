@@ -39,41 +39,41 @@
 //   list.display();
 // }
 
-class Node {
-  dynamic data;
-  Node? next;
+// class Node {
+//   dynamic data;
+//   Node? next;
 
-  Node(this.data) {
-    next = null;
-  }
-}
+//   Node(this.data) {
+//     next = null;
+//   }
+// }
 
-class LinkedLIst {
-  Node? head;
-  
+// class LinkedLIst {
+//   Node? head;
 
-  arrayElement(List array) {
-    head = Node(array[0]);
-    var current = head;
-    for (var i = 1; i < array.length; i++) {
-      current!.next = Node(array[i]);
-      current = current.next;
-    }
-    return current;
-  }
+//   arrayElement(List array) {
+//     head = Node(array[0]);
+//     var current = head;
+//     for (var i = 1; i < array.length; i++) {
+//       current!.next = Node(array[i]);
+//       current = current.next;
+//     }
+//     return current;
+//   }
 
-  void display() {
-    var temp = head;
-    while (temp != null) {
-      print(temp.data);
-      temp = temp.next;
-    }
-  }
-}
+//   void display() {
+//     var temp = head;
+//     while (temp != null) {
+//       print(temp.data);
+//       temp = temp.next;
+//     }
+//   }
+// }
 
-void main() {
-  List array = [1, 2, 3, 4, 5];
-  var list = LinkedLIst();
-  list.arrayElement(array);
-  list.display();
-}
+// void main() {
+//   List array = [1, 2, 3, 4, 5];
+//   var list = LinkedLIst();
+//   list.arrayElement(array);
+//   list.display();
+// }
+
