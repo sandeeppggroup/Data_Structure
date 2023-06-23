@@ -67,16 +67,66 @@
 
 // buble Sort
 
+// void main() {
+//   List<int> array = [3, 2, 6, 4, 8, 3];
+//   bubbleSort(array);
+// }
+
+// void bubbleSort(List<int> array) {
+//   int length = array.length;
+//   for (int i = 0; i < length; i++) {
+//     int flag = 0;
+//     for (int j = 0; j < length - 1 - i; j++) {
+//       if (array[j] > array[j + 1]) {
+//         int temp = array[j];
+//         array[j] = array[j + 1];
+//         array[j + 1] = temp;
+//         flag++;
+//       }
+//     }
+//     if (flag == 0) {
+//       break;
+//     }
+//     print(array);
+//   }
+// }
+
+// Bubble Sort
+
+// void main() {
+//   List<int> array = [3, 2, 5, 1, 6, 3];
+//   bubbleSort(array);
+// }
+
+// void bubbleSort(List<int> array) {
+//   for (int i = 0; i < array.length; i++) {
+//     int flag = 0;
+//     for (int j = 0; j < array.length - 1 - i; j++) {
+//       if (array[j] > array[j + 1]) {
+//         int temp = array[j];
+//         array[j] = array[j+1];
+//         array[j + 1] = temp;
+//         flag++;
+//       }
+//     }
+//     if (flag == 0) {
+//       break;
+//     }
+//     print(array);
+//   }
+// }
+
+// bubble sort
+
 void main() {
-  List<int> array = [3, 2, 6, 4, 8, 3];
+  List<int> array = [4, 3, 6, 2, 1];
   bubbleSort(array);
 }
 
 void bubbleSort(List<int> array) {
-  int length = array.length;
-  for (int i = 0; i < length; i++) {
+  for (int i = 0; i < array.length; i++) {
     int flag = 0;
-    for (int j = 0; j < length - 1 - i; j++) {
+    for (int j = 0; j < array.length - 1 - i; j++) {
       if (array[j] > array[j + 1]) {
         int temp = array[j];
         array[j] = array[j + 1];
@@ -87,8 +137,6 @@ void bubbleSort(List<int> array) {
     if (flag == 0) {
       break;
     }
-    print(array);
   }
+  print(array);
 }
-
-
