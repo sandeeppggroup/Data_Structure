@@ -57,3 +57,65 @@
 //   }
 //   print(array);
 // }
+
+// Insertion Sort
+
+// void main() {
+//   List<int> array = [5, 3, 2, 1, 4];
+//   insertionSort(array);
+// }
+
+// insertionSort(List<int> array) {
+//   int temp;
+//   for (int i = 1; i < array.length; i++) {
+//     temp = array[i];
+//     int j = i - 1;
+
+//     while (j >= 0 && array[j] > temp) {
+//       array[j + 1] = array[j];
+//       j--;
+//     }
+//     array[j + 1] = temp;
+//   }
+//   print(array);
+// }
+
+// void main() {
+//   List<int> array = [6, 5, 7, 8, 2, 1, 2];
+//   insertionSort(array);
+// }
+
+// void insertionSort(List<int> array) {
+//   for (int i = 1; i < array.length; i++) {
+//     int temp = array[i];
+//     int j = i - 1;
+
+//     while (j >= 0 && array[j] > temp) {
+//       array[j + 1] = array[j];
+//       j--;
+//     }
+//     array[j + 1] = temp;
+//   }
+//   print(array);
+// }
+
+// Insertion Sort
+
+void main() {
+  List<int> array = [4, 2, 5, 2, 1, 3];
+  insertionSort(array);
+}
+
+void insertionSort(List<int> array) {
+  for (int i = 1; i < array.length; i++) {
+    int temp = array[i];
+    int j = i - 1;
+    while (j >= 0 && array[j] > temp) {
+      array[j + 1] = array[j];
+      j--;
+    }
+    array[j + 1] = temp;
+  }
+  print(array);
+}
+
