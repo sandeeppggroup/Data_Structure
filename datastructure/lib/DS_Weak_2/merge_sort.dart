@@ -1,51 +1,54 @@
-void mergeSort(List<int> a, int lb, int ub) {
+void mergeSort(List<int> array1, int lb, int ub) {
   if (lb < ub) {
     int mid = ((lb + ub) ~/ 2);
-    mergeSort(a, lb, mid);
-    mergeSort(a, mid + 1, ub);
-    merge(a, lb, mid, ub);
+    mergeSort(array1, lb, mid);
+    mergeSort(array1, mid + 1, ub);
+    merge(array1, lb, mid, ub);
   }
 }
 
-void merge(List<int> a, int lb, int mid, int ub) {
+void merge(List<int> array1, int lb, int mid, int ub) {
   int i = lb;
   int j = mid + 1;
   int k = lb;
-  List<int> b = List<int>.filled(ub + 1, 0);
+  List<int> array2 = List<int>.filled(ub + 1, 0);
 
   while (i <= mid && j <= ub) {
-    if (a[i] < a[j]) {
-      b[k] = a[i];
+    if (array1[i] < array1[j]) {
+      array2[k] = array1[i];
       i++;
     } else {
-      b[k] = a[j];
+      array2[k] = array1[j];
       j++;
     }
     k++;
   }
 
   while (i <= mid) {
-    b[k] = a[i];
+    array2[k] = array1[i];
     i++;
     k++;
   }
 
   while (j <= ub) {
-    b[k] = a[j];
+    array2[k] = array1[j];
     j++;
     k++;
   }
 
   for (int x = lb; x <= ub; x++) {
-    a[x] = b[x];
+    array1[x] = array2[x];
   }
 }
 
 void main() {
-  List<int>numbers = [23, 43, 54, 756, 67, 2, 5, 8, 6];
-  int lb = 0;
-  int ub = numbers.length - 1;
-  print('Before sorting:$numbers');
-  mergeSort(numbers, lb, ub);
-  print('After sorting:$numbers');
+  List<int> array1 = [2, 5, 8, 6, 1];
+
+  print('Before sorting:$array1');
+  mergeSort(array1, 0, array1.length - 1);
+  print('After sorting:$array1');
 }
+
+
+
+

@@ -1,5 +1,3 @@
-import 'dart:collection';
-
 class CustomQueue {
   List<dynamic> _queue = [];
   bool get isEmpty => _queue.isEmpty;
@@ -40,6 +38,8 @@ void main() {
   for (var element in queue._queue) {
     print(element);
   }
-  
+
   print(queue.isEmpty);
 }
+
+
