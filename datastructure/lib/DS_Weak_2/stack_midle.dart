@@ -18,8 +18,8 @@ class Stack {
       throw Exception('empty stack');
     }
 
-    int middle = _stack.length ~/ 2 ;
-    for (int i = 0; i <= middle-1; i++) {
+    int middle = _stack.length ~/ 2;
+    for (int i = 0; i <= middle - 1; i++) {
       _tempstack.add(_stack.removeLast());
     }
     _stack.removeLast();

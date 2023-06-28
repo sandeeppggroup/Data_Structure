@@ -12,10 +12,9 @@ class customstack {
       isEmpty ? throw Exception('stack empty') : _stack.removeLast();
 
   dynamic peek() {
-     isEmpty ? throw Exception('stack empty') : _stack.last;
+    isEmpty ? throw Exception('stack empty') : _stack.last;
   }
 
- 
   void deleteMiddleElement() {
     if (isEmpty) {
       throw Exception('Stack empty');
@@ -50,8 +49,7 @@ void main() {
   stack.push(5);
   stack.push(6);
   stack.push(7);
- 
- 
+
   stack.deleteMiddleElement();
   stack.display();
 }

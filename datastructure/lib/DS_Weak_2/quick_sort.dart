@@ -1,5 +1,5 @@
 // void main() {
-//   List<int> array = [2, 5, 1, 6, 7, 4];
+//   List<int> array = [3, 2, 6, 7, 3, 1];
 //   quickSort(array, 0, array.length - 1);
 //   print(array);
 // }
@@ -38,8 +38,8 @@
 // }
 
 void main() {
-  List<int> array = [3, 2, 6, 7, 3, 1];
-  quickSort(array, 0, array.length - 1);
+  List<int> array = [3, 2, 6, 88, 7, 4, 11, 3, 2, 66, 55, 321];
+  quickSort(array, 0, array.length-1);
   print(array);
 }
 
@@ -58,20 +58,22 @@ int partition(List<int> array, int lb, int ub) {
   int end = ub;
 
   while (start < end) {
-    while (array[start] <= pivot && start != end) {
+    while (array[start] <= pivot) {
       start++;
     }
     while (array[end] > pivot) {
       end--;
     }
+
     if (start < end) {
       temp = array[start];
       array[start] = array[end];
       array[end] = temp;
     }
+    
   }
   temp = array[lb];
-  array[lb] = array[end];
-  array[end] = temp;
-  return end;
+    array[lb] = array[end];
+    array[end] = temp;
+    return end;
 }
