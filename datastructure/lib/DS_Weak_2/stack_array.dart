@@ -20,9 +20,9 @@ class customstack {
       throw Exception('Stack empty');
     }
 
-    int middle = (_stack.length ~/ 2) + 1;
+    int middle = (_stack.length ~/ 2);
 
-    for (int i = 0; i < middle - 1; i++) {
+    for (int i = 0; i < middle; i++) {
       _tempStack.add(_stack.removeLast());
     }
 

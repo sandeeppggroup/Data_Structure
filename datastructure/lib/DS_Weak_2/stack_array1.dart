@@ -1,5 +1,18 @@
+void main() {
+  Stack stack = Stack();
+  stack.push(20);
+  stack.push(60);
+  stack.push(40);
+  stack.push(20);
+  stack.push(80);
+  stack.push(55);
+  stack.deleteMiddleElementSecondMethod();
+  stack.display();
+}
+
 class Stack {
   List<dynamic> stack = [];
+  List<dynamic> stackTemp = [];
 
   bool get isEmpty => stack.isEmpty;
 
@@ -7,13 +20,8 @@ class Stack {
     stack.add(item);
   }
 
-  dynamic pop() {
-    if (stack.isEmpty) {
-      throw Exception(
-          'stack is empty first you should give any values to the stack (stack.push(value))');
-    } else {
-      stack.removeLast();
-    }
+  void pop() {
+    isEmpty ? throw Exception('Stack is empty') : stack.removeLast();
   }
 
   void display() {
@@ -21,17 +29,22 @@ class Stack {
       print(stack[i]);
     }
   }
-}
 
-void main() {
-  Stack stack = Stack();
-  // stack.push(10);
-  // stack.push('abraham');
-  // stack.push("sherin");
-  // stack.push(5.444);
-  
-  stack.push(66);
-  stack.pop();
+  void deleteMiddleElement() {
+    int mid = stack.length ~/ 2;
+    stack.removeAt(mid);
+  }
 
-  stack.display();
+  void deleteMiddleElementSecondMethod() {
+    int mid = stack.length ~/ 2;
+    for (int i = 0; i < mid; i++) {
+      stackTemp.add(stack.removeLast());
+    }
+
+    stack.removeLast();
+
+    for (int i = 0; i < mid; i++) {
+      stack.add(stackTemp.removeLast());
+    }
+  }
 }
