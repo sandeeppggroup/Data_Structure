@@ -2,6 +2,8 @@ import 'dart:io';
 
 void main() {
   List<int> array = [];
+  array.addAll([10, 20]);
+ 
   print('Enter the seze of an array');
   int size = int.parse(stdin.readLineSync()!);
   print("enter the value of array");

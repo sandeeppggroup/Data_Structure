@@ -20,7 +20,9 @@ class Node {
   dynamic data;
   Node? link;
 
-  Node(this.data);
+  Node(dynamic data1) {
+    this.data = data ;
+  }
 }
 
 class LinkedList {
@@ -63,7 +65,7 @@ void main() {
   link.insertAtTail(10);
   link.insertAtTail(20);
   link.insertAtTail(30);
-  
+
   link.insertAtTail(60);
   link.display();
 }
