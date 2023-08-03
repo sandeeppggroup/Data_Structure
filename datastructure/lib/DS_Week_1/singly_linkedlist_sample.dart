@@ -69,12 +69,12 @@ class SinglyLinkedList {
 
 void main() {
   var list = SinglyLinkedList();
+  list.addNode(20);
   list.addNode(10);
   list.addNode(20);
-  list.addNode(20);
-  list.addNode(20);
   list.addNode(50);
+  list.addNode(20);
   list.removeDuplicate();
-  // list.delete(40);
+  list.delete(10);
   list.display();
 }

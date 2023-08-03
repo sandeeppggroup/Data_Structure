@@ -18,10 +18,10 @@
 
 class Node {
   dynamic data;
-  Node? link;
+  Node? next;
 
   Node(dynamic data1) {
-    this.data = data ;
+    this.data = data1;
   }
 }
 
@@ -32,7 +32,7 @@ class LinkedList {
 
   void insertAtHead(dynamic data) {
     final newNode = Node(data);
-    newNode.link = head;
+    newNode.next = head;
     head = newNode;
   }
 
@@ -42,10 +42,10 @@ class LinkedList {
       head = newNode;
     } else {
       var current = head;
-      while (current!.link != null) {
-        current = current.link;
+      while (current!.next != null) {
+        current = current.next;
       }
-      current.link = newNode;
+      current.next = newNode;
     }
   }
 
@@ -53,19 +53,18 @@ class LinkedList {
     var current = head;
     while (current != null) {
       print(current.data);
-      current = current.link;
+      current = current.next;
     }
-    print('null');
   }
 }
 
 void main() {
-  final link = LinkedList();
-  link.insertAtHead(50);
-  link.insertAtTail(10);
-  link.insertAtTail(20);
-  link.insertAtTail(30);
-
-  link.insertAtTail(60);
-  link.display();
+  final linkedList = LinkedList();
+  
+  linkedList.insertAtHead(40);
+  linkedList.insertAtTail(10);
+  linkedList.insertAtTail(20);
+  linkedList.insertAtTail(30);
+  linkedList.insertAtTail(60);
+  linkedList.display();
 }

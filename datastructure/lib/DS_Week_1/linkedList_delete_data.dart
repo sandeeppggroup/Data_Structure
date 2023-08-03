@@ -1,5 +1,3 @@
-
-
 class Node {
   dynamic data;
   Node? next;
@@ -19,7 +17,6 @@ class linkedList {
     } else {
       tail!.next = newNode;
       tail = newNode;
-      
     }
   }
 
@@ -34,7 +31,7 @@ class linkedList {
 
   void delete(dynamic data) {
     Node? current = head;
-    Node? prev = null;
+    Node? prev;
 
     if (current != null && current.data == data) {
       head = current.next;
@@ -45,37 +42,12 @@ class linkedList {
       prev = current;
       current = current.next;
     }
-    
+
     if (current == null) {
       return;
     }
     prev!.next = current.next;
   }
-
-  // void deleteNode(int data) {
-  //   Node? currentNode = head;
-  //   Node? previousNode = null;
-
-  //   // Check if the head node itself holds the key to be deleted
-  //   if (currentNode != null && currentNode.data == data) {
-  //     head = currentNode.next; // Move the head pointer to the next node
-  //     return;
-  //   }
-
-  //   // Search for the key to be deleted, keeping track of the previous node
-  //   while (currentNode != null && currentNode.data != data) {
-  //     previousNode = currentNode;
-  //     currentNode = currentNode.next;
-  //   }
-
-  //   // If the key was not present in the list
-  //   if (currentNode == null) {
-  //     return;
-  //   }
-
-  //   // Unlink the node from the linked list
-  //   previousNode!.next = currentNode.next;
-  // }
 
   void display() {
     var temp = head;
@@ -101,6 +73,6 @@ void main() {
   // list.display();
   // list.arrayElement(array);
   // list.display();
-  // list.delete(50);
+  list.delete(50);
   list.display();
 }

@@ -81,9 +81,9 @@
 // }
 
 void main() {
-  List<int> numbers = [1, 2, 3, 4, 5, 6, 7];
+List<int> numbers = [1, 2, 3, 4, 5, 6, 7];
   int element = 6;
-  int result = binarySearch(numbers, element);
+  int? result = binarySearch(numbers, element);
   if (result == -1) {
     print('Element not found');
   } else {

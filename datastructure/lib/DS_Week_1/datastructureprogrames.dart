@@ -1,7 +1,7 @@
 
 // find the elements that added and the result is 10
 void main() {
-  List<int> numbers = [6, 5, 1, 3, 9, 8, 0 ];
+  List<int> numbers = [6, 2, 1, 3, 9, 8, 0 ];
   int target = 10;
 
   List<int>? resultlist = result(numbers, target);
@@ -12,6 +12,17 @@ void main() {
     
     print("there is no numbers adding this");
   }
+
+  List<int>? resultlist1 = result(numbers, target);
+
+  if (resultlist != null) {
+    print('the numbers are ${resultlist[0]} and ${resultlist[1]}');
+  } else {
+    
+    print("there is no numbers adding this");
+  }
+
+  
 }
 
 List<int>? result(List<int> numbers, int target) {
