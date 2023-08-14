@@ -86,10 +86,6 @@
 //   next.display();
 // }
 
-import 'dart:js_util';
-
-import 'package:datastructure/DS_Week_1/doubly_linkedlist.dart';
-
 // class Node {
 //   dynamic data;
 //   Node? next;
@@ -187,7 +183,6 @@ class Stack {
     current = top;
     while (current != null) {
       print(current);
-      
     }
   }
 }

@@ -1,4 +1,4 @@
-// Binary SEarch Tree
+// Binary Search Tree
 
 import 'dart:io';
 
