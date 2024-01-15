@@ -1,5 +1,3 @@
-import 'package:datastructure/akshith_madan_dart_tutorial/functions_with_2datatypes_return.dart';
-
 void main() {
   // camelCase - using for functions and variables in dart.
   // PascalCase - using for creating class names.
